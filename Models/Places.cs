@@ -29,7 +29,7 @@ namespace FavoritePlaces.Models
         {
           return _stayTime;
         }
-        public void SetStayTime(string newStayTime)
+        public void SetStayTime(int newStayTime)
         {
           _stayTime = newStayTime;
         }

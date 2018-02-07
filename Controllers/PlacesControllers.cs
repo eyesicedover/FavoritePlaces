@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Places.Models;
+using FavoritePlaces.Models;
 
 namespace FavoritePlaces.Controllers
 {
@@ -9,7 +9,8 @@ namespace FavoritePlaces.Controllers
         [HttpGet("/places")]
         public ActionResult Index()
         {
-            return View();
+            List<Place> allPlaces = Place.GetAll();
+            return View(allPlaces);
         }
 
         [HttpGet("/places/new")]
@@ -27,6 +28,14 @@ namespace FavoritePlaces.Controllers
             string newImage = Request.Form["imageLink"];
             Place newPlace = new Place(newCity, intNewStayTime, newImage);
             newPlace.Save();
+            List<Place> allPlaces = Place.GetAll();
+            return View("Index", allPlaces);
+        }
+
+        [HttpPost("/places/clear")]
+        public ActionResult Clear()
+        {
+            Place.ClearAll();
             List<Place> allPlaces = Place.GetAll();
             return View("Index", allPlaces);
         }

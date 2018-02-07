@@ -1,0 +1,8 @@
+/Users/Guest/Desktop/fave_places/bin/Debug/netcoreapp1.1/FavoritePlaces.deps.json
+/Users/Guest/Desktop/fave_places/bin/Debug/netcoreapp1.1/FavoritePlaces.runtimeconfig.json
+/Users/Guest/Desktop/fave_places/bin/Debug/netcoreapp1.1/FavoritePlaces.runtimeconfig.dev.json
+/Users/Guest/Desktop/fave_places/obj/Debug/netcoreapp1.1/FavoritePlaces.AssemblyInfo.cs
+/Users/Guest/Desktop/fave_places/bin/Debug/netcoreapp1.1/FavoritePlaces.dll
+/Users/Guest/Desktop/fave_places/bin/Debug/netcoreapp1.1/FavoritePlaces.pdb
+/Users/Guest/Desktop/fave_places/obj/Debug/netcoreapp1.1/FavoritePlaces.dll
+/Users/Guest/Desktop/fave_places/obj/Debug/netcoreapp1.1/FavoritePlaces.pdb
