@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Favorite Places</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+      <h1>List of Favorite Cities</h1>
+    </div>
+    <div class="well text-center">
+      <h3>Current List of Favorite Cities:</h3>
+      <ul style="list-style-position: inside;">
+        @foreach(var place in Model)
+        {
+          <li>@place.GetCity()</li>
+          <ul style="list-style-position: inside;">
+            <li>Length of Stay: @place.GetStayTime</li>
+            <li><a href='"' + @place.GetImage() + '"'>Link to picture</a></li>
+          </ul>
+        }
+      </ul>
+      <h4><a href="/places/new">Add Your Favorite City!</a></h4>
+    </div>
+  </body>
+</html>

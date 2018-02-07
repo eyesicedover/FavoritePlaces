@@ -1,0 +1,34 @@
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Places.Models;
+
+namespace FavoritePlaces.Controllers
+{
+    public class PlacesController : Controller
+    {
+        [HttpGet("/places")]
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet("/places/new")]
+        public ActionResult Form()
+        {
+            return View();
+        }
+
+        [HttpPost("/places")]
+        public ActionResult Create()
+        {
+            string newCity = Request.Form["cityName"];
+            string stringNewStayTime = Request.Form["StayTime"];
+            int intNewStayTime = int.Parse(stringNewStayTime);
+            string newImage = Request.Form["imageLink"];
+            Place newPlace = new Place(newCity, intNewStayTime, newImage);
+            newPlace.Save();
+            List<Place> allPlaces = Place.GetAll();
+            return View("Index", allPlaces);
+        }
+    }
+}
